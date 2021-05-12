@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="utf-8">
+   <!-- <link rel="stylesheet" type="text/css" href="index.css">-->
+<title>Rétine et pupille</title>
+</head>
+
+
+
+<body >
+
+    <img id="img" src="img/retineetpupille.jpg">
+
+<div id=videocontainer> 
+   
+    <iframe id=video src="https://www.youtube.com/embed/6mIoIAneUcY" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+     <div id="bouton" >
+           <a id= video-titre ><img id=titre-partie2 src="img/titre-partie2bis.png"> 
+            <img id=video-cercle src="img/bientot.png">
+            <!--<video id=video-cercle  src="img/BA-cercle2.mp4" autoplay muted loop ></video>-->
+            </a>
+     </div>
+
+</div>
+
+
+
+
+</body>
+
+</html>
+
+<style>
+
+@font-face {
+font-family: 'HKGrotesk-Bold';
+src: url('fonts/HKGrotesk-Bold.ttf');
+src: url('fonts/HKGrotesk-Bold?#iefix') format('embedded-opentype'),}
+
+body
+{
+margin: 0;
+
+height: 100vh;
+}
+#video
+{
+position: fixed;
+margin: 0;
+width: 100%;
+height: 100%;
+z-index: 3;
+
+
+}
+
+#videocontainer
+{
+position: fixed;
+margin: 0;
+width: 100%;
+height: 100%;
+z-index: 2;
+}
+
+#img
+{
+position: absolute;
+size: cover;
+height: 100%;
+width: 100%;
+z-index: 1;
+filter: blur(4px) grayscale(60%);
+
+margin: 0;
+animation:apparition 1s ease-in;
+
+}
+
+@keyframes apparition {
+            from {
+                opacity: 0;
+                }
+            to {
+                opacity: 1;
+                
+            }
+         }
+
+     
+
+     
+
+     #video-cercle
+     {
+    display: flex;
+    opacity: 0;
+    z-index: 10; 
+    width: 90%;
+    
+    
+    
+    
+      
+     }
+
+     #video-titre
+     {
+         display: flex;
+         opacity: 1;
+         width: 100%;
+         
+         align-items: center;
+         justify-content: center;
+     }
+
+     #bouton:hover #video-cercle
+     {
+         opacity: 70%;
+     }
+
+     #bouton:hover #titre-partie2
+     {
+         opacity: 0;
+     }
+    
+    #bouton:hover
+    {
+        background: black;
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        box-shadow: 1px 1px 8px black;
+    }
+    
+
+     #bouton
+     {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        
+        background-image: url('img/retine-cercle.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        right: 20px;
+        bottom: 40px;
+        z-index: 10;
+        overflow: hidden;
+        display: flex;
+        
+        
+     }
+
+     #titre-partie2
+     {
+         width: 90%;
+         position: absolute;
+         z-index: 20;
+        
+        opacity: 1;
+        top: 40%;
+         
+     }
+
+</style>

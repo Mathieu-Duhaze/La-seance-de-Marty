@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="utf-8">
+   <!-- <link rel="stylesheet" type="text/css" href="index.css">-->
+<title>Les bandes annonces</title>
+</head>
+
+
+
+<body >
+
+        <img id="img" src="img/1917.png">
+    
+   <div id=videocontainer> 
+       
+    <iframe id=video src="https://player.vimeo.com/video/363443481?autoplay=1&color=121212&title=0&byline=0&portrait=0&muted=1" 
+     frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+         <div id="bouton" >
+               <a id= video-titre href="BA2.html" target="_blank"><img id=titre-partie2 src="img/titre-partie2.png"> 
+                <video id=video-cercle  src="img/BA-cercle2.mp4" autoplay muted loop ></video>
+                </a>
+         </div>
+    
+    </div>
+
+    
+
+
+ </body>
+
+ </html>
+
+ <style>
+
+@font-face {
+    font-family: 'HKGrotesk-Bold';
+    src: url('fonts/HKGrotesk-Bold.ttf');
+    src: url('fonts/HKGrotesk-Bold?#iefix') format('embedded-opentype'),}
+
+body
+{
+    margin: 0;
+    
+    height: 100vh;
+}
+#video
+{
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    
+    
+}
+
+#videocontainer
+{
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#img
+{
+    position: absolute;
+    size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    filter: blur(4px) grayscale(60%);
+    
+    margin: 0;
+    animation:apparition 1s ease-in;
+    
+}
+
+@keyframes apparition {
+                from {
+                    opacity: 0;
+                    }
+                to {
+                    opacity: 1;
+                    
+                }
+             }
+
+         
+
+         
+
+         #video-cercle
+         {
+        position: absolute;
+        
+        z-index: 10; 
+        width: 170%;
+        top: -3%;
+        
+        
+          
+         }
+
+         #video-titre
+         {
+             opacity: 0;
+             width: 100%;
+             height: 50%;
+         }
+
+         #bouton:hover #video-titre 
+         {
+             opacity: 1;
+         }
+        
+        #bouton:hover
+        {
+            background: black;
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            box-shadow: 1px 1px 8px black;
+        }
+        
+
+         #bouton
+         {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            background-color: black;
+            background-image: url('img/BA-cercle2.png');
+            background-size: 105%;
+            background-position: center;
+            background-repeat: no-repeat;
+            right: 20px;
+            bottom: 40px;
+            z-index: 10;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            
+         }
+
+         #titre-partie2
+         {
+             width: 75%;
+             position: absolute;
+             z-index: 20;
+             padding-left: 20px;
+            opacity: 1;
+            top: 70%;
+             
+         }
+    
+ </style>

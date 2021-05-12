@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="utf-8">
+   <!-- <link rel="stylesheet" type="text/css" href="index.css">-->
+<title>La séance de Marty</title>
+</head>
+
+<body>
+
+
+<div id=blocpage>
+
+    <video id="video0" src="img/lsdm.mp4" autoplay muted loop>  </video>
+
+    <div id='clicentrer'>
+
+        <button id="entrer" type="button" >ENTRER</button>
+
+</div></div>
+
+<div id=videoContainer>
+    <video id="video" preload="metadata"  relative src="img/intro.mp4"  muted autoplay></video>
+
+
+<div id="video-controls" class="controls">
+
+<button onclick= "changecolor('linear-gradient(to top left, #e4e2dc 35%, white)')" id="skip" type="button">SKIP</button>
+
+ <img id="mute" src="img/son-mute.png" alt="" onclick="this.src='img/son3.png'" > </img>
+
+
+</div></div>
+
+<section id='home'>
+
+    <img id='bandeau' src="img/bandeau-rouge.png">
+    
+    <img id='lsdm' src="img/LSDM.png">
+
+    <img id='laseancedemarty' src="img/la-seance-de-marty-rouge.png">
+
+    <div id='boxvideos'>
+
+        <a href="Roi-et-oiseau.html" target="_blank" class=boxes  onmouseover="piloteVideo()" onmouseout="piloteVideo()"id=roi>
+            <video id=video-roi  src="img/roi-redim2.mp4"  loop> </video> <img  id=titre src="img/titre.png"></img></a>
+
+        <a href="LCCMA.html" target="_blank" class='boxes'onmouseover="piloteVideo2()" onmouseout="piloteVideo2()"id=LCCMA >
+            <video id=video-LCCMA src="img/LCCMA-redim.mp4"  loop> </video><img id=titre-LCCMA src="img/titre-LCCMA.png"></a>
+
+        <a href="BA.html" target="_blank" class='boxes'onmouseover="piloteVideo3()" onmouseout="piloteVideo3()"id=BA >
+            <video id=video-BA src="img/BA2.mp4"  loop> </video><img id=titre-BA src="img/titre-BA.png"></a>
+
+        <a href="LGDM.html" target="_blank" class='boxes'onmouseover="piloteVideo4()" onmouseout="piloteVideo4()"id=LGDM >
+                <video id=video-LGDM src="img/LGDM.mp4"  loop> </video><img id=titre-LGDM src="img/titre-LGDM.png"></a>
+
+
+        <a href="minority.html" target="_blank" class='boxes'onmouseover="piloteVideo5()" onmouseout="piloteVideo5()"id=minority >
+                <video id=video-minority src="img/minority.mp4"  loop> </video><img id=titre-minority src="img/titre-minority.png"></a>
+
+        <a href="retine.html" target="_blank" class='boxes'onmouseover="piloteVideo6()" onmouseout="piloteVideo6()"id=retine >
+                <video id=video-retine src="img/retine.mp4"  loop> </video><img id=titre-retine src="img/titre-retine.png"></a>
+    </div>
+
+   <!-- <img class=titre id=titre src="img/titre.png"></img>-->
+</section>
+
+</body>
+
+
+
+<style>
+
+    
+
+    #video0
+
+    {
+            
+            position: fixed; right: 0; bottom: 0;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto; z-index: 10;
+        
+    }
+
+    #entrer
+    {
+             position: absolute;
+             
+             font-size: 50px;
+             bottom: 170px;
+             right: 675px;
+             opacity: 0;
+             z-index: 15;
+             cursor: pointer;
+    }
+      
+    @font-face {
+    font-family: 'PlayfairDisplaySC-Regular';
+    src: url('fonts/PlayfairDisplaySC-Regular.otf');
+    src: url('fonts/Quicksand-Regular?#iefix') format('embedded-opentype'),
+}
+
+         body
+         {
+             margin: 0;
+             background-color:black;
+             height: 100vh;
+             
+             
+             
+         }
+
+         #videoContainer
+         {
+             
+             max-height: 100%;
+             background-color: black;
+             z-index: 3;
+             display: none;
+
+             
+             
+            
+         }
+
+        #video
+        {
+            position: relative;
+            position: fixed; right: 0; bottom: -55px;
+            min-width: 100%; min-height: 100vh;
+            width: auto; height: auto; z-index: 3;
+            text-align:center;
+            
+         }
+
+         #skip
+         {
+             
+             position:absolute;
+             bottom: 75px;
+             right: 50px;
+             cursor: pointer;
+             border: none;
+             background: none;
+             color: #fdbe3b;
+             font-family: PlayfairDisplaySC-Regular;
+             text-decoration: none;
+             z-index: 4;
+         }
+
+         #mute
+         {
+             width: 30px;
+             position:absolute;
+             bottom: 75px;
+             left: 50px;
+             cursor: pointer;
+             z-index: 4;
+             
+         }
+
+         
+
+         #mute:hover
+         {
+             width: 34px;
+
+         }
+
+         
+        
+         #skip:hover
+         {
+            font-weight: bold;
+         }
+
+         #skip:active
+         {
+             border: none; }
+   
+        #home
+        {
+            position: relative;
+            background-color:linear-gradient(to top left, #e4e2dc 35%, white);
+            display: none;
+            height: 100vh;
+            animation: Gradient 1s;
+            animation-delay: loaded;
+            z-index: 0;
+            }
+    
+
+
+        #bandeau
+        {
+            height: 100vh;
+            width: 25%;
+            animation: apparition 2s ease-out;
+            animation-delay: loaded;
+            overflow: hidden; 
+             z-index: 1;}
+
+            @keyframes apparition {
+                from {
+                    opacity: 0;
+                    
+                }
+                to {
+                    opacity:1;
+                    
+                }
+            }
+
+            
+
+        #lsdm
+        {
+            position: absolute;
+            height: 150px;
+            left: 2%;
+            top: 50px;
+            animation : applsdm 2s ease-out;
+            animation-delay: loaded;
+            z-index: 2;
+        }
+            
+            @keyframes applsdm {
+                from {
+                    opacity: 0;
+                    transform: translateY(-100px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+            
+        
+
+        #laseancedemarty
+        {
+            position: absolute;
+            height: 9px;
+            left: 7%;
+            top: 7%;
+            animation: apparition3 2s ease-out;
+            animation-delay: loaded;
+           z-index: 2;
+        }
+
+        @keyframes apparition3 {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+         
+        #boxvideos 
+        {
+           position: absolute;
+            display: flex;
+            width: 70%;
+            height: 70%;
+            z-index: 3;
+            justify-content: space-between;
+            bottom:8%;
+            left: 20%;
+
+            
+            
+        }
+
+        .boxes
+        {
+            display: flex;
+            
+            height: 450px;
+            width: 150px;
+            overflow: hidden;
+            
+           
+        }
+        .boxes:hover
+        {
+            width: 200px;
+        }
+
+/*ROI ET OISEAU */
+
+
+       
+        #roi
+        {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('img/roi.jpg');
+            filter: grayscale(80%); 
+            animation: boxes 1s ease-out;
+            animation-delay: loaded;
+            overflow: visible;
+            top: -10%;
+            align-self: flex-end;
+            
+            
+        }
+
+        #roi:hover
+        {
+            filter: grayscale(0%);
+        }
+        #video-roi:hover
+        {
+            opacity: 1;
+            
+        }
+
+        #video-roi
+        {
+            display: block;
+            opacity: 0;
+            height: 100%;
+            
+            
+        }
+
+        
+
+        @keyframes boxes {
+                from {
+                    opacity: 0;
+                    transform: translateY(150px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+        #titre
+        {
+            width :600px;
+            position: absolute;
+            top: -150px;
+            left: 300px;
+            display: none;  
+            animation: titre 2s ease-out; 
+        }
+    
+    #roi:hover #titre
+    {
+        display: block;
+    }
+
+    @keyframes titre {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+            
+
+/* LE CINEMA C'ETAIT MIEUX AVANT */
+
+        #LCCMA
+        {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('img/avatar.jpg');
+            filter: grayscale(70%); 
+            animation: boxes-LCCMA 1s ease-out;
+            animation-delay: loaded;
+            overflow: visible;
+            max-width: 200px;
+            align-self: center;
+        }
+
+        #LCCMA:hover
+        {
+            filter: grayscale(0%);
+        }
+        #video-LCCMA:hover
+        {
+            opacity: 1;
+            
+        }
+
+        #video-LCCMA
+        {
+            opacity: 0;
+        }
+
+        
+
+        @keyframes boxes-LCCMA {
+                from {
+                    opacity: 0;
+                    transform: translateY(-150px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+        #titre-LCCMA
+        {
+        width :800px;
+        position: absolute;
+        top: -100px;
+        left: 20px;
+        display: none;  
+        animation: titre-LCCMA 2s ease-out; 
+    }
+    
+    #LCCMA:hover #titre-LCCMA
+    {
+        display: block;
+    }
+
+    @keyframes titre-LCCMA {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+/* LES BANDES ANNONCES */
+
+#BA
+        {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('img/BA.jpg');
+            filter: grayscale(70%); 
+            animation: boxes-BA 1s ease-out;
+            animation-delay: loaded;
+            overflow: visible;
+            max-width: 200px;
+            align-self: flex-end;
+        }
+
+        #BA:hover
+        {
+            filter: grayscale(0%);
+        }
+        #video-BA:hover
+        {
+            opacity: 1;
+            
+        }
+
+        #video-BA
+        {
+            opacity: 0;
+        }
+
+        
+
+        @keyframes boxes-BA {
+                from {
+                    opacity: 0;
+                    transform: translateY(150px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+        #titre-BA
+        {
+        width :650px;
+        position: absolute;
+        top: -150px;
+        left: -100px;
+        display: none;  
+        animation: titre-BA 2s ease-out; 
+    }
+    
+    #BA:hover #titre-BA
+    {
+        display: block;
+    }
+
+    @keyframes titre-BA {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+        
+/* LA GUERRE DES MONDES */
+
+#LGDM
+        {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('img/LGDM2.jpg');
+            filter: grayscale(70%); 
+            animation: boxes-LGDM 1s ease-out;
+            animation-delay: loaded;
+            overflow: visible;
+            max-width: 200px;
+            align-self: center;
+            
+        }
+
+        #LGDM:hover
+        {
+            filter: grayscale(0%);
+        }
+        #video-LGDM:hover
+        {
+            opacity: 1;
+            
+        }
+
+        #video-LGDM
+        {
+            opacity: 0;
+        }
+
+        
+
+        @keyframes boxes-LGDM {
+                from {
+                    opacity: 0;
+                    transform: translateY(-150px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+        #titre-LGDM
+        {
+        width :700px;
+        position: absolute;
+        top: -100px;
+        left: -280px;
+        display: none;  
+        animation: titre-LGDM 2s ease-out; 
+    }
+    
+    #LGDM:hover #titre-LGDM
+    {
+        display: block;
+    }
+
+    @keyframes titre-LGDM {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+
+/*CETTE SCENE : MINORITY REPORT*/
+
+#minority
+        {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('img/minority.jpg');
+            filter: grayscale(70%); 
+            animation: boxes-minority 1s ease-out;
+            animation-delay: loaded;
+            overflow: visible;
+            max-width: 200px;
+            align-self: flex-end;
+        }
+
+        #minority:hover
+        {
+            filter: grayscale(0%);
+        }
+        #video-minority:hover
+        {
+            opacity: 1;
+            
+        }
+
+        #video-minority
+        {
+            opacity: 0;
+        }
+
+        
+
+        @keyframes boxes-minority {
+                from {
+                    opacity: 0;
+                    transform: translateY(150px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+        #titre-minority
+        {
+        width :650px;
+        position: absolute;
+        top: -150px;
+        left: -450px;
+        display: none;  
+        animation: titre-BA 2s ease-out; 
+    }
+    
+    #minority:hover #titre-minority
+    {
+        display: block;
+    }
+
+    @keyframes titre-minority {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+
+/* RÉTINE ET PUPILLES */
+
+#retine
+        {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('img/retineetpupille2.jpg');
+            filter: grayscale(70%); 
+            animation: boxes-retine 1s ease-out;
+            animation-delay: loaded;
+            overflow: visible;
+            max-width: 200px;
+            align-self: center;
+            
+        }
+
+        #retine:hover
+        {
+            filter: grayscale(0%);
+        }
+        #video-retine:hover
+        {
+            opacity: 1;
+            
+        }
+
+        #video-retine
+        {
+            opacity: 0;
+        }
+
+        
+
+        @keyframes boxes-retine {
+                from {
+                    opacity: 0;
+                    transform: translateY(-150px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+        #titre-retine
+        {
+        width :600px;
+        position: absolute;
+        top: -100px;
+        left: -300%;
+        display: none;  
+        animation: titre-retine 2s ease-out; 
+    }
+    
+    #retine:hover #titre-retine
+    {
+        display: block;
+    }
+
+    @keyframes titre-retine {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+             }
+
+
+
+</style>
+
+
+
+
+</html>
+
+<script type="text/javascript"> 
+
+
+
+
+    var videoContainer = document.getElementById('videoContainer');
+    var video = document.getElementById('video');
+    var videoControls = document.getElementById('video-controls');
+    var skip = document.getElementById('skip');
+    var mute = document.getElementById('mute');
+    var entrer = document.getElementById('entrer');
+    var blocpage = document.getElementById('blocpage');
+
+
+/* au clic sur entrer blocpage disparait et apparait le conteneur video */
+entrer.addEventListener('click', function(e){
+        document.getElementById ("blocpage").style.display = "none"
+        document.getElementById ("videoContainer").style.display = "block" 
+        });
+
+
+/* clique sur video = pause ou play */
+video.addEventListener('click', function(e) {
+   if (video.paused || video.ended) video.play();
+   else video.pause();});
+
+   /* mute ou unmute sur le logo son*/
+   mute.addEventListener('click', function(e) {
+   video.muted = !video.muted;});
+
+   /* au clic sur skip la vidéo se met en pause*/    
+   skip.addEventListener ('click', function(e){
+        if (video.played) video.pause()});
+
+   /* au clic sur skip la vidéo et son contenur disparait et apparait le home*/
+   skip.addEventListener ('click', function(e){
+        document.getElementById ("home").style.display = "block"
+        document.getElementById ("videoContainer").style.display = "none"});
+        
+    
+
+/* fin de vidéo, la vidéo et son conteneur se cache et apparition du home */
+    document.getElementById("video").addEventListener("ended",function() {
+    document.getElementById("videoContainer").style.display = "none"
+    document.getElementById ("home").style.display = "block"});
+
+
+    /* fonction pour changer la couleur du fond du body*/
+        function changecolor(color) {
+            document.body.style.background = color;
+        }
+    /* appelle de la fonction changement de couleur du body à la fin de la vidéo*/
+    video.addEventListener ("ended", function (){
+        changecolor('linear-gradient(to top left, #e4e2dc 35%, white)')});
+
+
+        var roi = document.getElementById ('video-roi');
+        var LCCMA = document.getElementById('video-LCCMA');
+        var BA = document.getElementById('video-BA');
+        var LGDM = document.getElementById('video-LGDM');
+        var minority = document.getElementById('video-minority');
+        var retine = document.getElementById('video-retine');
+
+
+    
+        
+
+/* LE ROI ET L'OISEAU*/
+	function piloteVideo() {
+		if (roi.paused) {
+			roi.play();
+                        
+		} else {
+			roi.pause();}
+         };   
+
+/*LE CINEMA C'ETAIT MIEUX AVANT */
+         function piloteVideo2() {
+		if (LCCMA.paused) {
+			LCCMA.play();
+                        
+		} else {
+			LCCMA.pause();}
+         };   
+
+/* LES BANDES ANNONCES */
+         function piloteVideo3() {
+		if (BA.paused) {
+			BA.play();
+                        
+		} else {
+			BA.pause();}
+         };   
+
+
+/*LA GUERRE DES MONDES*/
+         function piloteVideo4() {
+		if (LGDM.paused) {
+			LGDM.play();
+                        
+		} else {
+			LGDM.pause();}
+         };   
+
+
+/*MINORITY REPORT*/
+function piloteVideo5() {
+		if (minority.paused) {
+			minority.play();
+                        
+		} else {
+			minority.pause();}
+         };   
+
+
+/*RETINE ET PUPILLE*/
+function piloteVideo6() {
+		if (retine.paused) {
+			retine.play();
+                        
+		} else {
+			retine.pause();}
+         };   
+   
+
+</script>
