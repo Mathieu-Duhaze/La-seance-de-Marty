@@ -26,7 +26,9 @@
 
 <button onclick= "changecolor('linear-gradient(to top left, #e4e2dc 35%, white)')" id="skip" type="button">SKIP</button>
 
- <img id="mute" src="img/son-mute.png" alt="" onclick="this.src='img/son3.png'" > </img>
+ <img id="mute" src="img/son-mute.png" alt=""  > </img>
+ <img id="mute2" src="img/son3.png" ></img>
+
 
 
 </div></div>
@@ -38,6 +40,9 @@
     <img id='lsdm' src="img/LSDM.png">
 
     <img id='laseancedemarty' src="img/la-seance-de-marty-rouge.png">
+
+    <img id="mute_all" src="img/son3.png">
+    <img id="unmute_all" src="img/son-mute.png">
 
     <div id='boxvideos'>
 
@@ -61,10 +66,22 @@
                 <video id=video-retine src="img/retine.mp4"  loop> </video><img id=titre-retine src="img/titre-retine.png"></a>
     </div>
 
-   <!-- <img class=titre id=titre src="img/titre.png"></img>-->
+
+<div id="reseau">
+
+<a  href="https://www.youtube.com/c/LaS%C3%A9anceDeMarty/featured" target="_blank"><img class="reseau" src="img/yt2.png"></a>
+<a  href="https://www.facebook.com/La-S%C3%A9ance-de-Marty-839407932802268" target="_blank"><img class="reseau" src="img/facebook2.png"></a>
+<a  href="https://twitter.com/LaSeanceDeMarty" target="_blank"><img class="reseau" src="img/twitter2.png"></a>
+
+</div>
+   
 </section>
 
+
+
 </body>
+
+
 
 
 
@@ -99,6 +116,11 @@
     src: url('fonts/PlayfairDisplaySC-Regular.otf');
     src: url('fonts/Quicksand-Regular?#iefix') format('embedded-opentype'),
 }
+
+    @font-face {
+    font-family:'HKGrotesk-Bold';
+    src: url('fonts/HKGrotesk-Bold.ttf');
+    src: url('fonts/HKGrotesk-Bold?#iefix') format('embedded-opentype'),}
 
          body
          {
@@ -142,15 +164,16 @@
              cursor: pointer;
              border: none;
              background: none;
-             color: #fdbe3b;
-             font-family: PlayfairDisplaySC-Regular;
+             color:white;
+             font-family: Arial, Helvetica, sans-serif, ;
+	         font-weight: lighter;
              text-decoration: none;
              z-index: 4;
          }
 
          #mute
          {
-             width: 30px;
+             width: 20px;
              position:absolute;
              bottom: 75px;
              left: 50px;
@@ -160,12 +183,20 @@
          }
 
          
-
-         #mute:hover
+         #mute2
          {
-             width: 34px;
-
+             width: 20px;
+             position:absolute;
+             bottom: 75px;
+             left: 50px;
+             cursor: pointer;
+             z-index: 4;
+             display: none;
+             
          }
+
+
+        
 
          
         
@@ -287,6 +318,24 @@
             width: 200px;
         }
 
+        #mute_all 
+    {   position: absolute;
+    width: 20px;
+        bottom: 3%;
+        left: 1%;
+        z-index: 200;
+    }
+
+    #unmute_all 
+    {
+        width: 20px;
+        position: absolute;
+        display: none;
+        z-index: 200;
+        bottom: 3%;
+        left:1%;
+
+    }
 /*ROI ET OISEAU */
 
 
@@ -310,6 +359,7 @@
         {
             filter: grayscale(0%);
         }
+
         #video-roi:hover
         {
             opacity: 1;
@@ -320,8 +370,7 @@
         {
             display: block;
             opacity: 0;
-            height: 100%;
-            
+            height: 100%;  
             
         }
 
@@ -703,6 +752,27 @@
                 }
              }
 
+#reseau
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 2%;
+    height: auto;
+    bottom: 2%;
+    right: 1%;
+ 
+}
+
+.reseau
+{
+    flex-basis: 5%;
+    padding-top: 30%;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    opacity: 80%;
+}
 
 
 </style>
@@ -722,6 +792,7 @@
     var videoControls = document.getElementById('video-controls');
     var skip = document.getElementById('skip');
     var mute = document.getElementById('mute');
+    var mute2 = document.getElementById('mute2');
     var entrer = document.getElementById('entrer');
     var blocpage = document.getElementById('blocpage');
 
@@ -741,6 +812,17 @@ video.addEventListener('click', function(e) {
    /* mute ou unmute sur le logo son*/
    mute.addEventListener('click', function(e) {
    video.muted = !video.muted;});
+
+   mute2.addEventListener('click', function(e) {
+   video.muted = !video.muted;});
+
+   mute.addEventListener ('click', function(e){
+        document.getElementById ("mute2").style.display = "block"
+        document.getElementById ("mute").style.display = "none"});
+
+    mute2.addEventListener ('click', function(e){
+        document.getElementById ("mute").style.display = "block"
+        document.getElementById ("mute2").style.display = "none"});
 
    /* au clic sur skip la vidéo se met en pause*/    
    skip.addEventListener ('click', function(e){
@@ -838,3 +920,55 @@ function piloteVideo6() {
    
 
 </script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+
+/*** Mute all ***/
+$("#mute_all").on("click",function(){
+
+/*** Mute all video and audio on page ***/
+$("body video, body audio").each(function(){
+/*** Do it here globally ***/
+$(this).prop("muted", true);
+});
+
+});
+
+/*** UnMute all ***/
+$("#unmute_all").on("click",function(){
+
+/*** Un Mute all video and audio on page ***/
+$("body video, body audio").each(function(){
+/*** Do it here globally ***/
+$(this).prop("muted", false);
+});
+
+});
+
+
+});
+
+var mute_all = document.getElementById ('mute_all');
+var unmute_all = document.getElementById ('unmute_all');
+
+mute_all.addEventListener('click', function(e){
+        document.getElementById ("mute_all").style.display = "none"
+        document.getElementById ("unmute_all").style.display = "block" 
+        });
+
+unmute_all.addEventListener('click', function(e){
+        document.getElementById ("unmute_all").style.display = "none"
+        document.getElementById ("mute_all").style.display = "block" 
+        });
+
+</script>
+
+<style>
+
+</style>
