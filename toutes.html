@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>La séance de Marty</title>
+</head>
+
+<body>
+
+    <main id=page>
+    <header>
+       <a href="index.html" > <img id=logo src="img/LSDM2.png"></a>
+        
+       <a target= "_blank" href= "soundtrack.html">  <img id=note src="img/note2.png"></a>
+
+    </header>
+
+    
+
+<div class=liste>
+    
+
+    <h2 class=titre-partie id=rétine >RÉTINE ET PUPILLE</h2>
+
+        <div  class= titre-video>
+            <a  id=rétineI onmouseover="changeBg()"  href="retine.html"><h3>PARTIE I</h3></a>
+            <a  id=rétineII onmouseover="changeBg2()"   href=""><h3>PARTIE II</h3></a>
+            </div>
+    
+
+    <h2 class=titre-partie >LES BANDES ANNONCES</h2>
+
+        <div class= titre-video>
+            <a  id=BA onmouseover="changeBg3()" href="BA.html"><h3>PARTIE I</h3></a>
+            <a id=BA2 onmouseover="changeBg4()" href="BA2.html"><h3>PARTIE II</h3></a>
+        </div>
+
+    <h2 class=titre-partie>LE CINÉMA C'ÉTAIT MIEUX AVANT?</h2>
+
+        <div class= titre-video>
+            <a  id=LCCMA onmouseover="changeBg5()" href="LCCMA.html"><h3>PARTIE I</h3></a>
+
+            <a  id= LCCMA2 onmouseover="changeBg6()" href="LCCMA2.html"><h3>PARTIE II</h3></a>
+        </div>
+
+
+
+    <h2 class=titre>CETTE SCÈNE</h2>
+
+        <div id=cette-scène>
+            <a id=episode0 onmouseover="changeBg7()"href=""><h3>EPISODE 0</h3></a>
+
+            <a  id=thecell onmouseover="changeBg8 ()" href=""><h3>THE CELL</h3></a>
+
+            <a id=minority onmouseover="changeBg9()" href="minority.html"><h3>MINORITY REPORT</h3></a>
+        </div>
+
+
+    <h2 class=titre>HORS-SÉRIES</h2>
+
+        <div id=cette-scène>
+            <a id=lgdm onmouseover="changeBg10()" href=""><h3>LA GUERRE DES MONDES</h3></a>
+
+            <a  id=roi onmouseover="changeBg11()" href=""><h3>LE ROI ET L'OISEAU</h3></a>
+
+            <a id=blade onmouseover="changeBg12()" href=""><h3>BLADE RUNNER 2049</h3></a>
+
+            <a id=alien onmouseover="changeBg13()" href=""><h3>ALIEN COVENANT</h3></a>
+
+            <a  id=50nuances onmouseover="changeBg14()" href=""><h3>50 NUANCES PLUS SOMBRES</h3></a>
+
+            <a id=lldws onmouseover="changeBg15()" href=""><h3>LE LOUP DE WALL STREET</h3></a>
+
+            <a id=jlfdm onmouseover="changeBg16()" href=""><h3>JUSTE LA FIN DU MONDE</h3></a>
+
+            <a  id=funny onmouseover="changeBg17()" href=""><h3>FUNNY GAMES</h3></a>
+
+            <a id=sw7 onmouseover="changeBg18()" href=""><h3>STAR WARS VII : LE RÉVEIL DE LA FORCE</h3></a>
+
+            <a id=spectre onmouseover="changeBg19()" href=""><h3>007 SPECTRE</h3></a>
+
+            <a  id=mars onmouseover="changeBg20()" href=""><h3>SEUL SUR MARS</h3></a>
+
+            <a id=riot onmouseover="changeBg21()" href=""><h3>THE RIOT CLUB</h3></a>
+
+            <a id=love onmouseover="changeBg22()" href=""><h3>LOVE</h3></a>
+
+            <a  id=jurassic onmouseover="changeBg23()" href=""><h3>JURRASSIC WORLD</h3></a>
+
+            <a id=interstellar onmouseover="changeBg24()" href=""><h3>INTERSTELLAR</h3></a>
+
+            <a id=nightcall onmouseover="changeBg25()" href=""><h3>NIGHTCALL</h3></a>
+
+        </div>
+
+    <h2 class=titre-partie>LES FILMS QUE J'AIME</h2>
+
+        <div class= titre-video>
+            <a  id=lfqj onmouseover="changeBg26()" href=""><h3>PARTIE I</h3></a>
+
+            <a  id= lfqj2 onmouseover="changeBg27()" href=""><h3>PARTIE II</h3></a>
+        </div>
+</div>
+</main>
+</body>
+
+<style>
+    
+
+    @font-face {
+    font-family:'HKGrotesk-Bold';
+    src: url('fonts/HKGrotesk-Bold.ttf');
+    src: url('fonts/HKGrotesk-Bold?#iefix') format('embedded-opentype'),}
+
+    @font-face {
+    font-family:'HKGrotesk-Light';
+    src: url('fonts/HKGrotesk-Light.otf');
+    src: url('fonts/HKGrotesk-Light?#iefix') format('embedded-opentype'),}
+    
+    body
+    {
+        
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image:url('img/retineNB.png');
+            background-attachment: fixed;
+    }
+   
+
+    header
+    {
+        text-align: center;
+       
+    }
+    #logo
+    {
+        width: 10%;
+        margin-top: 1%;
+        opacity: 70%;
+    }
+
+    #note
+    {
+        opacity: 0;
+        position: absolute;
+        height: 10%;
+    }
+
+    #note:hover
+    {
+        opacity: 0.7;
+    }
+
+    
+
+    .liste
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+        
+    }
+
+    .titre-partie
+    {
+        font-family: HKGrotesk-Bold;
+        color:#443c3c;
+        
+        letter-spacing: 0.5em;
+        margin-top: 3.5em;
+        margin-bottom: -0.5em;
+    
+    }
+
+    h2
+    {
+        font-family: HKGrotesk-Bold;
+        color: white;
+        opacity: 80%;
+        /*color:#443c3c;*/
+        
+        letter-spacing: 0.5em;
+        margin-top: 3em;
+        margin-bottom: 0.4em;
+    }
+
+    .titre-video
+    {
+        width: 30%;
+        margin-bottom: 0em;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: 'HKGrotesk-Light';
+        letter-spacing: 0.2em;
+        
+    }
+
+    #cette-scène
+    {
+        width: 40%;
+        margin-bottom: 0em;
+        
+        text-align: center;
+        font-family: 'HKGrotesk-Light';
+        letter-spacing: 0.2em;
+        
+    }
+    
+
+    a
+    {
+        text-decoration: none;
+        color: black;
+        
+        margin-bottom: -30px;  
+    }
+
+
+    #rétineI
+    {
+        color : #8b1623;
+    }
+
+
+</style>
+
+
+<script type="text/javascript">
+
+
+	let rétine = document.getElementById('rétine');
+    let page = document.getElementById('page');
+    let titre = document.getElementsByClassName('titre');
+    let rétineI = document.getElementById ('rétineI');
+    let rétineII = document.getElementById ('rétineII');
+    let BA = document.getElementById ('BA');
+    let BA2 = document.getElementById ('BA2');
+    let LCCMA = document.getElementById ('LCCMA');
+    let LCCMA2 = document.getElementById ('LCCMA2');
+    let episode0 = document.getElementById ('episode0');
+    let thecell = document.getElementById ('thecell');
+    let minority = document.getElementById ('minority');
+    let lgdm = document.getElementById ('lgdm');
+    let roi = document.getElementById ('roi');
+    let blade = document.getElementById ('blade');
+    let alien = document.getElementById ('alien');
+    let nuances = document.getElementById ('50nuances');
+    let lldws = document.getElementById ('lldws');
+    let jlfdm = document.getElementById ('jlfdm');
+    let funny = document.getElementById ('funny');
+    let sw = document.getElementById ('sw7');
+    let spectre = document.getElementById ('spectre');
+    let mars = document.getElementById ('mars');
+    let riot = document.getElementById ('riot');
+    let love = document.getElementById ('love');
+    let jurassic = document.getElementById ('jurassic');
+    let interstellar = document.getElementById ('interstellar');
+    let nightcall = document.getElementById ('nightcall');
+    let lfqj = document.getElementById ('lfqj');
+    let lfqj2 = document.getElementById ('lfqj2');
+
+    
+    
+	
+	
+	
+
+    function changeBg() {
+            document.body.style.backgroundImage= 'url(img/retineNB.png)';
+            rétineI.style.color= '#8b1623';
+            rétineII.style.color= 'black';
+            BA.style.color= 'black';
+            BA2.style.color= 'black';
+            LCCMA.style.color= 'black';
+            LCCMA2.style.color= 'black';
+            episode0.style.color= 'black';
+            thecell.style.color= 'black';
+            minority.style.color= 'black';
+            lgdm.style.color= 'black';
+            roi.style.color= 'black';
+            blade.style.color= 'black';
+            alien.style.color= 'black';
+            nuances.style.color= 'black';
+            lldws.style.color= 'black';
+            jlfdm.style.color= 'black';
+            funny.style.color= 'black';
+            sw.style.color= 'black';
+            spectre.style.color= 'black';
+            mars.style.color= 'black';
+            riot.style.color= 'black';
+            love.style.color= 'black';
+            jurassic.style.color= 'black';
+            interstellar.style.color= 'black';
+            nightcall.style.color= 'black';
+            lfqj.style.color= 'black';
+            lfqj2.style.color= 'black';
+            rétine.innerText = ('RÉTINE ET PUPILLE');
+    };
+
+    function changeBg2() {
+            document.body.style.backgroundImage= 'url(img/textures.png)';
+            rétineI.style.color= 'black';
+            rétineII.style.color= '#8b1623';
+            BA.style.color= 'black';
+            BA2.style.color= 'black';
+            LCCMA.style.color= 'black';
+            LCCMA2.style.color= 'black';
+            episode0.style.color= 'black';
+            thecell.style.color= 'black';
+            minority.style.color= 'black';
+            lgdm.style.color= 'black';
+            roi.style.color= 'black';
+            blade.style.color= 'black';
+            alien.style.color= 'black';
+            nuances.style.color= 'black';
+            lldws.style.color= 'black';
+            jlfdm.style.color= 'black';
+            funny.style.color= 'black';
+            sw.style.color= 'black';
+            spectre.style.color= 'black';
+            mars.style.color= 'black';
+            riot.style.color= 'black';
+            love.style.color= 'black';
+            jurassic.style.color= 'black';
+            interstellar.style.color= 'black';
+            nightcall.style.color= 'black';
+            lfqj.style.color= 'black';
+            lfqj2.style.color= 'black';
+            rétine.innerText = ('TEXTURE DE CINEMA');
+    };
+
+    function changeBg3() {
+
+            document.body.style.backgroundImage= 'url(img/ba1NB.png)';
+            rétineI.style.color= 'black';
+            rétineII.style.color= 'black';
+            BA.style.color= '#8b1623';
+            BA2.style.color= 'black';
+            LCCMA.style.color= 'black';
+            LCCMA2.style.color= 'black';
+            episode0.style.color= 'black';
+            thecell.style.color= 'black';
+            minority.style.color= 'black';
+            lgdm.style.color= 'black';
+            roi.style.color= 'black';
+            blade.style.color= 'black';
+            alien.style.color= 'black';
+            nuances.style.color= 'black';
+            lldws.style.color= 'black';
+            jlfdm.style.color= 'black';
+            funny.style.color= 'black';
+            sw.style.color= 'black';
+            spectre.style.color= 'black';
+            mars.style.color= 'black';
+            riot.style.color= 'black';
+            love.style.color= 'black';
+            jurassic.style.color= 'black';
+            interstellar.style.color= 'black';
+            nightcall.style.color= 'black';
+            lfqj.style.color= 'black';
+            lfqj2.style.color= 'black';
+    };
+
+    function changeBg4() {
+
+            document.body.style.backgroundImage= 'url(img/ba2NB.png)';
+            rétineI.style.color= 'black';
+            rétineII.style.color= 'black';
+            BA.style.color= 'black';
+            BA2.style.color= '#8b1623';
+            LCCMA.style.color= 'black';
+            LCCMA2.style.color= 'black';
+            episode0.style.color= 'black';
+            thecell.style.color= 'black';
+            minority.style.color= 'black';
+            lgdm.style.color= 'black';
+            roi.style.color= 'black';
+            blade.style.color= 'black';
+            alien.style.color= 'black';
+            nuances.style.color= 'black';
+            lldws.style.color= 'black';
+            jlfdm.style.color= 'black';
+            funny.style.color= 'black';
+            sw.style.color= 'black';
+            spectre.style.color= 'black';
+            mars.style.color= 'black';
+            riot.style.color= 'black';
+            love.style.color= 'black';
+            jurassic.style.color= 'black';
+            interstellar.style.color= 'black';
+            nightcall.style.color= 'black';
+            lfqj.style.color= 'black';
+            lfqj2.style.color= 'black';
+            };
+
+    function changeBg5() {
+
+            document.body.style.backgroundImage= 'url(img/lccma1NB.png)';
+            rétineI.style.color= 'black';
+            rétineII.style.color= 'black';
+            BA.style.color= 'black';
+            BA2.style.color= 'black';
+            LCCMA.style.color= '#8b1623';
+            LCCMA2.style.color= 'black';
+            episode0.style.color= 'black';
+            thecell.style.color= 'black';
+            minority.style.color= 'black';
+            lgdm.style.color= 'black';
+            roi.style.color= 'black';
+            blade.style.color= 'black';
+            alien.style.color= 'black';
+            nuances.style.color= 'black';
+            lldws.style.color= 'black';
+            jlfdm.style.color= 'black';
+            funny.style.color= 'black';
+            sw.style.color= 'black';
+            spectre.style.color= 'black';
+            mars.style.color= 'black';
+            riot.style.color= 'black';
+            love.style.color= 'black';
+            jurassic.style.color= 'black';
+            interstellar.style.color= 'black';
+            nightcall.style.color= 'black';
+            lfqj.style.color= 'black';
+            lfqj2.style.color= 'black';
+            };
+
+    function changeBg6() {
+
+        document.body.style.backgroundImage= 'url(img/lccma2NB.png)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= '#8b1623';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg7() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= '#8b1623';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg8() {
+
+            document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+            rétineI.style.color= 'black';
+            rétineII.style.color= 'black';
+            BA.style.color= 'black';
+            BA2.style.color= 'black';
+            LCCMA.style.color= 'black';
+            LCCMA2.style.color= 'black';
+            episode0.style.color= 'black';
+            thecell.style.color= '#8b1623';
+            minority.style.color= 'black';
+            lgdm.style.color= 'black';
+            roi.style.color= 'black';
+            blade.style.color= 'black';
+            alien.style.color= 'black';
+            nuances.style.color= 'black';
+            lldws.style.color= 'black';
+            jlfdm.style.color= 'black';
+            funny.style.color= 'black';
+            sw.style.color= 'black';
+            spectre.style.color= 'black';
+            mars.style.color= 'black';
+            riot.style.color= 'black';
+            love.style.color= 'black';
+            jurassic.style.color= 'black';
+            interstellar.style.color= 'black';
+            nightcall.style.color= 'black';
+            lfqj.style.color= 'black';
+            lfqj2.style.color= 'black';
+            };
+
+    function changeBg9() {
+
+            document.body.style.backgroundImage= 'url(img/minorityNB.png)';
+            rétineI.style.color= 'black';
+            rétineII.style.color= 'black';
+            BA.style.color= 'black';
+            BA2.style.color= 'black';
+            LCCMA.style.color= 'black';
+            LCCMA2.style.color= 'black';
+            episode0.style.color= 'black';
+            thecell.style.color= 'black';
+            minority.style.color= '#8b1623';
+            lgdm.style.color= 'black';
+            roi.style.color= 'black';
+            blade.style.color= 'black';
+            alien.style.color= 'black';
+            nuances.style.color= 'black';
+            lldws.style.color= 'black';
+            jlfdm.style.color= 'black';
+            funny.style.color= 'black';
+            sw.style.color= 'black';
+            spectre.style.color= 'black';
+            mars.style.color= 'black';
+            riot.style.color= 'black';
+            love.style.color= 'black';
+            jurassic.style.color= 'black';
+            interstellar.style.color= 'black';
+            nightcall.style.color= 'black';
+            lfqj.style.color= 'black';
+            lfqj2.style.color= 'black';
+            };
+
+    function changeBg10() {
+
+        document.body.style.backgroundImage= 'url(img/lgdmNB.png)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= '#8b1623';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg11() {
+
+        document.body.style.backgroundImage= 'url(img/roiNB.png)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= '#8b1623';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg12() {
+
+        document.body.style.backgroundImage= 'url(img/bladeN&B.png)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= '#8b1623';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg13() {
+
+        document.body.style.backgroundImage= 'url(img/alienNB.png)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= '#8b1623';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg14() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= '#8b1623';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg15() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= '#8b1623';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg16() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= '#8b1623';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg17() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= '#8b1623';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg18() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= '#8b1623';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg19() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= '#8b1623';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg20() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= '#8b1623';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg21() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= '#8b1623';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg22() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= '#8b1623';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg23() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= '#8b1623';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg24() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= '#8b16235';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg25() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= '#8b1623';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg26() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= '#8b1623';
+        lfqj2.style.color= 'black';
+        };
+
+    function changeBg27() {
+
+        document.body.style.backgroundImage= 'url(img/blade2.jpg)';
+        rétineI.style.color= 'black';
+        rétineII.style.color= 'black';
+        BA.style.color= 'black';
+        BA2.style.color= 'black';
+        LCCMA.style.color= 'black';
+        LCCMA2.style.color= 'black';
+        episode0.style.color= 'black';
+        thecell.style.color= 'black';
+        minority.style.color= 'black';
+        lgdm.style.color= 'black';
+        roi.style.color= 'black';
+        blade.style.color= 'black';
+        alien.style.color= 'black';
+        nuances.style.color= 'black';
+        lldws.style.color= 'black';
+        jlfdm.style.color= 'black';
+        funny.style.color= 'black';
+        sw.style.color= 'black';
+        spectre.style.color= 'black';
+        mars.style.color= 'black';
+        riot.style.color= 'black';
+        love.style.color= 'black';
+        jurassic.style.color= 'black';
+        interstellar.style.color= 'black';
+        nightcall.style.color= 'black';
+        lfqj.style.color= 'black';
+        lfqj2.style.color= '#8b1623';
+        };
+
+</script>
+
+
+
+
+</html>
